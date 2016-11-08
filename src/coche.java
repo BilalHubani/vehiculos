@@ -12,8 +12,13 @@ public class coche extends vehiculos {
         this.plazas = plazas;
     }
 
-    public coche(String matricula, int dia, int plazas) {
-        super(matricula, dia);
+    public coche(String matricula, int plazas) {
+        super(matricula);
         this.plazas = plazas;
+    }
+
+    @Override
+    public double precioFinal(int dia) {
+        return super.precioFinal(dia)+ 1.5 * this.plazas;
     }
 }

@@ -12,8 +12,13 @@ public class microbus extends vehiculos{
         this.plazas = plazas;
     }
 
-    public microbus(String matricula, int dia, int plazas) {
-        super(matricula, dia);
+    public microbus(String matricula, int plazas) {
+        super(matricula);
         this.plazas = plazas;
+    }
+
+    @Override
+    public double precioFinal(int dia) {
+        return super.precioFinal(dia) + 2 * this.plazas;
     }
 }

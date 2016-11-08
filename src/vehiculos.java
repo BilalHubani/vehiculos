@@ -4,7 +4,6 @@
 public class vehiculos {
     final private int precioBase = 50;
     private String matricula;
-    private int dia;
 
     public int getPrecioBase() {
         return precioBase;
@@ -18,21 +17,12 @@ public class vehiculos {
         this.matricula = matricula;
     }
 
-    public int getDia() {
-        return dia;
-    }
-
-    public void setDia(int dia) {
-        this.dia = dia;
-    }
-
-    public vehiculos(String matricula, int dia) {
+    public vehiculos(String matricula) {
         this.matricula = matricula;
-        this.dia = dia;
     }
 
-    public double precioFinal(){
-        double precio = this.precioBase;
+    public double precioFinal(int dia){
+        double precio = this.precioBase * dia;
         return precio;
     }
 }

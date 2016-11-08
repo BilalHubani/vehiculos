@@ -12,8 +12,13 @@ public class carga extends vehiculos{
         this.pma = pma;
     }
 
-    public carga(String matricula, int dia, int pma) {
-        super(matricula, dia);
+    public carga(String matricula, int pma) {
+        super(matricula);
         this.pma = pma;
+    }
+
+    @Override
+    public double precioFinal(int dia) {
+        return super.precioFinal(dia) + 20 * this.pma;
     }
 }
